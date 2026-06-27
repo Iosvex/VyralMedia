@@ -43,32 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- INTERACTION FOR WHO IT'S FOR TABS ---
-  const tabButtons = document.querySelectorAll('#tabs-nav .tab-btn');
-  const tabPanels = document.querySelectorAll('#tabs-content .tab-panel');
-
-  tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove active state from all buttons
-      tabButtons.forEach(btn => btn.classList.remove('active'));
-      // Add active state to clicked button
-      button.classList.add('active');
-      
-      const targetPanelId = button.getAttribute('data-tab');
-      
-      // Hide all panels
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-      });
-      
-      // Show target panel with fade-in animation
-      const targetPanel = document.getElementById(targetPanelId);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
-      }
-    });
-  });
-
   // --- FAQ ACCORDION ANIMATION ---
   const faqItems = document.querySelectorAll('#faqs-accordion .faq-item');
 

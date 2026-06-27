@@ -6,7 +6,7 @@
   --bg-primary: #050505;
   --bg-secondary: #0f0f0f;
   --bg-tertiary: #161616;
-  --accent: #82EE2D; /* Premium Neon Green */
+  --accent: #82EE2D;
   --accent-rgb: 130, 238, 45;
   --accent-dark: #123d04;
   --accent-forest: #1c5210;
@@ -117,7 +117,7 @@ p {
 
 @media (max-width: 768px) {
   .section-padding {
-    padding: 5rem 0;
+    padding: 3.5rem 0;
   }
 }
 
@@ -424,7 +424,6 @@ p {
   .hamburger-btn {
     display: block;
   }
-  /* On mobile, keep the Call CTA visible always if required, or we center/right align it */
   .navbar .btn-primary {
     padding: 0.6rem 1.2rem;
     font-size: 0.85rem;
@@ -478,6 +477,12 @@ p {
 @media (max-width: 768px) {
   .hero-ctas {
     flex-direction: column;
+    align-items: center;
+  }
+  .hero-ctas .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
   }
 }
 
@@ -983,6 +988,12 @@ p {
 @media (max-width: 576px) {
   .services-cta-row {
     flex-direction: column;
+    align-items: center;
+  }
+  .services-cta-row .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
   }
 }
 
@@ -1055,7 +1066,7 @@ p {
 }
 
 .comp-col-without svg {
-  color: #ef4444; /* Soft Red */
+  color: #ef4444;
   flex-shrink: 0;
   width: 16px;
   height: 16px;
@@ -1100,45 +1111,13 @@ p {
   }
 }
 
-/* --- WHO IT'S FOR (TABS UI) --- */
+/* --- WHO IT'S FOR (TABS UI) - all panels visible --- */
 .whos-it-for {
   background: var(--bg-primary);
 }
 
 .tabs-nav-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 3.5rem;
-  overflow-x: auto;
-  padding-bottom: 0.5rem;
-}
-
-.tabs-nav {
-  display: flex;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 9999px;
-  padding: 0.35rem;
-  list-style: none;
-  white-space: nowrap;
-}
-
-.tab-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-secondary);
-  font-family: var(--font-headings);
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  cursor: pointer;
-  transition: var(--transition-fast);
-}
-
-.tab-btn.active {
-  background: var(--accent);
-  color: var(--bg-pure);
+  display: none !important;
 }
 
 .tabs-content {
@@ -1147,17 +1126,9 @@ p {
 }
 
 .tab-panel {
-  display: none;
-  animation: tabFadeIn 0.5s ease forwards;
-}
-
-.tab-panel.active {
-  display: block;
-}
-
-@keyframes tabFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  display: block !important;
+  animation: none !important;
+  margin-bottom: 2rem;
 }
 
 .tab-content-card {
@@ -1237,10 +1208,14 @@ p {
     gap: 1rem;
   }
   .tab-content-card {
-    padding: 2rem;
+    padding: 1.75rem;
   }
   .tabs-cta-row {
     flex-direction: column;
+  }
+  .tabs-cta-row .btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1427,7 +1402,6 @@ p {
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Pro Card Elevation Style */
 .pricing-card.pro-card {
   background: linear-gradient(180deg, rgba(130, 238, 45, 0.03) 0%, rgba(0,0,0,0) 100%), var(--bg-secondary);
   border: 2px solid var(--accent);
@@ -1536,7 +1510,6 @@ p {
   margin-top: 1rem;
 }
 
-/* Callout below Pricing Cards */
 .pricing-consultation-banner {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
@@ -1563,7 +1536,6 @@ p {
   }
 }
 
-/* Trust graphics below pricing */
 .pricing-trust-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1699,6 +1671,12 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.faqs-bottom-cta .btn {
+  width: 100%;
+  max-width: 320px;
+  justify-content: center;
+}
+
 /* --- BLOG SECTION --- */
 .blog {
   background: var(--bg-primary);
@@ -1766,6 +1744,9 @@ p {
   .blog-grid {
     grid-template-columns: 1fr;
   }
+  .blog-card {
+    padding: 1.5rem;
+  }
 }
 
 /* --- FINAL CTA SECTION --- */
@@ -1812,7 +1793,8 @@ p {
   }
   .final-cta-buttons .btn {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    justify-content: center;
   }
 }
 
@@ -2086,504 +2068,506 @@ p {
   animation: pulse-dot 1.5s infinite;
 }
 
-/* --- COMPACT MOBILE RESPONSIVE POLISH --- */
+/* ============================================================
+   ENHANCED MOBILE RESPONSIVENESS
+   ============================================================ */
+
 @media (max-width: 768px) {
-  /* Viewport Reset */
+  /* --- Global reset for mobile --- */
   html, body {
     overflow-x: hidden !important;
     width: 100% !important;
   }
 
-  /* Spacing & Paddings */
-  .section-padding {
-    padding: 2.5rem 0 !important;
+  .container {
+    padding: 0 1.25rem !important;
   }
 
-  .glass-card {
-    padding: 1.25rem !important;
-    border-radius: 12px !important;
-  }
-
-  .section-header {
-    margin-bottom: 2rem !important;
-  }
-
-  /* Typography */
+  /* --- Typography --- */
   h1 {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
-
   h2 {
-    font-size: 1.75rem !important;
-    margin-bottom: 0.5rem !important;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.75rem !important;
   }
-
   p {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
+  }
+  .section-header p {
+    font-size: 0.95rem !important;
   }
 
-  /* Buttons */
+  /* --- Buttons --- */
   .btn {
-    padding: 0.75rem 1.25rem !important;
-    font-size: 0.85rem !important;
+    padding: 0.85rem 1.5rem !important;
+    font-size: 0.9rem !important;
+    min-height: 48px !important;
   }
 
-  /* Hero Section */
+  /* --- Hero --- */
   .hero {
-    padding-top: 8.5rem !important;  /* increased from 6.5rem to avoid overlap */
-    padding-bottom: 3rem !important;
+    padding-top: 8.5rem !important;
+    padding-bottom: 3.5rem !important;
   }
-
   .hero-content h1 {
-    margin-bottom: 1rem !important;
+    margin-bottom: 0.75rem !important;
   }
-
   .hero-content p {
+    font-size: 1rem !important;
     margin-bottom: 1.5rem !important;
   }
-
   .hero-ctas {
-    margin-bottom: 2rem !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
     gap: 0.75rem !important;
+    margin-bottom: 2rem !important;
   }
-
   .hero-ctas .btn {
-    flex: 1 1 calc(50% - 0.75rem) !important;
-    min-width: 140px !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.85rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-content: center !important;
+  }
+  .hero-features {
+    gap: 0.75rem !important;
+    justify-content: center !important;
+  }
+  .hero-feature-item {
+    font-size: 0.8rem !important;
   }
 
+  /* --- Dashboard --- */
   .dashboard-mockup {
     padding: 1rem !important;
     border-radius: 12px !important;
   }
-
+  .db-header {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
   .db-grid {
+    grid-template-columns: 1fr 1fr !important;
     gap: 0.75rem !important;
   }
-
   .db-card {
     padding: 0.75rem !important;
   }
-
   .db-card-value {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important;
+  }
+  .db-chart-container {
+    padding: 0.75rem !important;
+    height: 100px !important;
+  }
+  .db-chart-svg {
+    height: 45px !important;
   }
 
-  /* Grids & Cards Polish */
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
+  /* --- Social Proof Stats --- */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.25rem !important;
   }
-
-  .benefit-card-content h3 {
-    font-size: 0.95rem !important;
-    gap: 0.5rem !important;
+  .stat-card {
+    padding: 0.75rem 0 0.75rem 1rem !important;
+    border-left-width: 3px !important;
   }
-
-  .benefit-card-content h3 svg {
-    width: 16px !important;
-    height: 16px !important;
+  .stat-number {
+    font-size: 2.2rem !important;
   }
-
-  .why-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-  }
-
-  .why-grid .glass-card {
-    padding: 1.25rem !important;
-  }
-
-  .why-grid h3 {
-    font-size: 0.95rem !important;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-  }
-
-  .services-cta-row {
-    margin-top: 2rem !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 0.75rem !important;
-  }
-
-  .services-cta-row .btn {
-    flex: 1 1 calc(50% - 0.75rem) !important;
-    min-width: 140px !important;
-    padding: 0.75rem 1rem !important;
+  .stat-label {
     font-size: 0.85rem !important;
   }
 
-  .nodes-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
+  /* --- Cards & Grids --- */
+  .glass-card {
+    padding: 1.5rem !important;
+    border-radius: 14px !important;
   }
 
+  .benefits-grid,
+  .why-grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .benefit-card-content h3 {
+    font-size: 1.1rem !important;
+  }
+  .benefit-card-content p {
+    font-size: 0.9rem !important;
+  }
+
+  .why-grid .glass-card {
+    padding: 1.5rem !important;
+  }
+  .why-grid h3 {
+    font-size: 1.1rem !important;
+  }
+
+  .service-card {
+    padding: 1.5rem !important;
+  }
+  .service-card h3 {
+    font-size: 1.1rem !important;
+  }
+  .service-card p {
+    font-size: 0.85rem !important;
+  }
+
+  /* --- Network Nodes --- */
+  .network-nodes-flow {
+    padding: 1.5rem !important;
+  }
+  .nodes-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.75rem !important;
+  }
   .node-card {
     padding: 0.75rem !important;
   }
-
   .node-handle {
     font-size: 0.8rem !important;
-    margin-bottom: 0.5rem !important;
   }
-
+  .node-stat-item {
+    font-size: 0.7rem !important;
+  }
   .network-funnel {
     margin: 1.5rem 0 !important;
   }
-
   .funnel-arrow {
     width: 30px !important;
     height: 45px !important;
   }
-
   .target-brand-node {
-    padding: 1rem 2rem !important;
+    padding: 1rem 1.5rem !important;
     font-size: 1rem !important;
   }
-
   .network-stats-strip {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: 1fr !important;
     gap: 0.75rem !important;
-    margin-top: 1.5rem !important;
   }
-
   .network-stat-card {
-    padding: 0.75rem !important;
-    border-radius: 10px !important;
+    padding: 1rem !important;
   }
-
   .network-stat-card h4 {
-    font-size: 1.25rem !important;
-    margin-bottom: 0.25rem !important;
+    font-size: 1.3rem !important;
   }
 
-  .network-stat-card p {
-    font-size: 0.7rem !important;
-    line-height: 1.3 !important;
-  }
-
-  /* Process Swipeable Timeline */
+  /* --- Process --- */
   .process-timeline {
     display: flex !important;
     overflow-x: auto !important;
     scroll-snap-type: x mandatory !important;
-    gap: 1rem !important;
+    gap: 1.25rem !important;
     padding-bottom: 1rem !important;
     scrollbar-width: none !important;
     margin-bottom: 2.5rem !important;
   }
-
   .process-timeline::-webkit-scrollbar {
     display: none !important;
   }
-
   .process-step {
-    flex: 0 0 82% !important;
+    flex: 0 0 85% !important;
     scroll-snap-align: center !important;
     padding: 1.25rem !important;
     border: 1px solid var(--border-color) !important;
-    border-radius: 12px !important;
+    border-radius: 14px !important;
     background: var(--bg-secondary) !important;
   }
-
   .step-number {
-    width: 48px !important;
-    height: 48px !important;
-    font-size: 1rem !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 1.1rem !important;
     margin-bottom: 1rem !important;
   }
-
   .process-step h3 {
     font-size: 1.1rem !important;
   }
-
+  .process-step p {
+    font-size: 0.9rem !important;
+  }
   .process-marquee {
     gap: 1.5rem !important;
   }
 
-  /* Pricing Swipeable Carousel */
+  /* --- Pricing --- */
   .pricing-grid {
-    display: flex !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 1.25rem !important;
-    padding: 1rem 1.5rem !important;
-    margin-left: -1.5rem !important;
-    margin-right: -1.5rem !important;
-    scrollbar-width: none !important;
-    margin-bottom: 2.5rem !important;
-    align-items: stretch !important;
-  }
-
-  .pricing-grid::-webkit-scrollbar {
-    display: none !important;
-  }
-
-  .pricing-card {
-    flex: 0 0 82% !important;
-    scroll-snap-align: center !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    padding: 0 !important;
     margin: 0 !important;
-    padding: 2rem 1.5rem !important;
+    overflow-x: visible !important;
+    scroll-snap-type: none !important;
+    max-width: 100% !important;
   }
-
+  .pricing-card {
+    padding: 2rem 1.5rem !important;
+    flex: none !important;
+    scroll-snap-align: none !important;
+  }
   .pricing-card.pro-card {
     transform: none !important;
+    border-width: 2px !important;
   }
-
   .pricing-scarcity-strip {
-    margin-bottom: 2rem !important;
-    padding: 0.5rem 1rem !important;
     font-size: 0.8rem !important;
+    padding: 0.5rem !important;
+    margin-bottom: 2rem !important;
   }
-
   .pricing-consultation-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
     padding: 1.5rem !important;
     margin-bottom: 3rem !important;
   }
-
   .pricing-consultation-banner h3 {
     font-size: 1.2rem !important;
   }
-
-  /* Pricing Trust Grid Carousel */
   .pricing-trust-grid {
-    display: flex !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
+    grid-template-columns: 1fr !important;
     gap: 1rem !important;
-    scrollbar-width: none !important;
-    margin-bottom: 2rem !important;
-    padding: 0.5rem 1.5rem !important;
-    margin-left: -1.5rem !important;
-    margin-right: -1.5rem !important;
   }
-
-  .pricing-trust-grid::-webkit-scrollbar {
-    display: none !important;
-  }
-
   .pricing-trust-card {
-    flex: 0 0 82% !important;
-    scroll-snap-align: center !important;
     padding: 1rem !important;
   }
-
   .pricing-trust-card h4 {
     font-size: 0.95rem !important;
   }
-
-  /* Tabs UI */
-  .tabs-nav-container {
-    margin-bottom: 2rem !important;
+  .pricing-trust-card p {
+    font-size: 0.8rem !important;
   }
 
-  .tab-btn {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.85rem !important;
+  /* --- Target Audience (Tabs removed) --- */
+  .tabs-content {
+    max-width: 100% !important;
   }
-
   .tab-content-card {
-    padding: 1.25rem !important;
-    border-radius: 16px !important;
+    padding: 1.5rem !important;
+    border-radius: 14px !important;
   }
-
   .tab-card-header {
+    flex-direction: column !important;
+    gap: 1rem !important;
     margin-bottom: 1.25rem !important;
     padding-bottom: 1rem !important;
   }
-
   .tab-card-title-block h3 {
     font-size: 1.2rem !important;
   }
-
   .tab-card-sub {
     font-size: 0.9rem !important;
   }
-
   .tab-result-badge {
-    padding: 0.4rem 0.75rem !important;
-    font-size: 0.75rem !important;
+    align-self: flex-start !important;
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.75rem !important;
   }
-
-  .tab-card-body {
-    margin-bottom: 1.5rem !important;
-  }
-
   .tab-card-body p {
     font-size: 0.9rem !important;
-    line-height: 1.5 !important;
   }
-
   .tabs-cta-row {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
+    flex-direction: column !important;
     gap: 0.75rem !important;
   }
-
   .tabs-cta-row .btn {
-    flex: 1 1 calc(50% - 0.75rem) !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.85rem !important;
+    width: 100% !important;
+    justify-content: center !important;
   }
 
-  /* Comparison Table (2-Column Override) */
+  /* --- Comparison Table --- */
+  .comparison-wrapper {
+    border-radius: 14px !important;
+  }
+  .comparison-header-row {
+    grid-template-columns: 1fr 1fr !important;
+    padding: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  .col-feature-title {
+    display: none !important;
+  }
   .comparison-row {
-    display: grid !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 0.5rem !important;
     padding: 1rem !important;
+    font-size: 0.85rem !important;
   }
-
   .comp-feature {
     grid-column: span 2 !important;
     font-size: 0.95rem !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
     padding-bottom: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
-
   .comp-col-without, .comp-col-with {
     font-size: 0.8rem !important;
   }
 
-  /* FAQs */
+  /* --- FAQs --- */
   .faqs-container {
     margin-bottom: 2.5rem !important;
   }
-
   .faq-trigger {
     padding: 1.25rem !important;
   }
-
   .faq-question {
     font-size: 0.95rem !important;
   }
-
   .faq-answer {
-    padding: 0 1.25rem 1.25rem 1.25rem !important;
+    padding: 0 1.25rem 1.25rem !important;
     font-size: 0.85rem !important;
   }
-
-  /* Blog */
-  .blog-grid {
-    grid-template-columns: 1fr !important;
+  .faqs-bottom-cta .btn {
+    max-width: 100% !important;
   }
 
+  /* --- Blog --- */
+  .blog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
   .blog-card {
     padding: 1.5rem !important;
   }
-
   .blog-card h3 {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
+  }
+  .blog-card p {
+    font-size: 0.85rem !important;
   }
 
-  /* Final CTA */
+  /* --- Final CTA --- */
   .final-cta-content h2 {
     font-size: 2rem !important;
   }
-
   .final-cta-content .subtext {
     font-size: 1.1rem !important;
   }
-
   .final-cta-content .lead-text {
+    font-size: 0.9rem !important;
     margin-bottom: 2rem !important;
-    font-size: 0.85rem !important;
   }
-
   .final-cta-buttons {
-    margin-bottom: 2rem !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
     gap: 0.75rem !important;
-  }
-
-  .final-cta-buttons .btn {
-    flex: 1 1 calc(50% - 0.75rem) !important;
-    min-width: 140px !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 0.85rem !important;
-  }
-
-  .final-cta-trust-row {
     margin-bottom: 2rem !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
+  }
+  .final-cta-buttons .btn {
+    width: 100% !important;
+    max-width: 100% !important;
     justify-content: center !important;
-    gap: 1rem !important;
   }
-
+  .final-cta-trust-row {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    margin-bottom: 2rem !important;
+  }
   .trust-item-inline {
-    font-size: 0.8rem !important;
-  }
-
-  .final-scarcity-box {
-    margin-bottom: 2.5rem !important;
     font-size: 0.85rem !important;
   }
-
+  .final-scarcity-box {
+    font-size: 0.8rem !important;
+    margin-bottom: 2.5rem !important;
+    padding: 0.5rem 1rem !important;
+  }
   .final-closing-statement {
     font-size: 1.2rem !important;
   }
 
-  /* Footer */
+  /* --- Footer --- */
   .footer {
     padding: 3rem 0 1.5rem !important;
   }
-
   .footer-grid {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
     gap: 2rem !important;
     margin-bottom: 2.5rem !important;
   }
-
   .footer-logo-block {
-    grid-column: span 2 !important;
-    margin-bottom: 1rem !important;
+    grid-column: span 1 !important;
   }
-
   .footer-logo-block .desc {
     font-size: 0.85rem !important;
   }
-
   .footer-col-title {
     margin-bottom: 1rem !important;
   }
-
   .footer-menu {
-    gap: 0.65rem !important;
+    gap: 0.75rem !important;
   }
-
   .footer-link, .footer-info-item {
     font-size: 0.85rem !important;
   }
-
   .footer-divider {
     margin-bottom: 1.5rem !important;
   }
-
   .footer-bottom-strip {
+    flex-direction: column !important;
     gap: 1rem !important;
+    text-align: center !important;
   }
-
   .footer-bottom-left {
-    font-size: 0.75rem !important;
-    gap: 0.5rem !important;
+    flex-direction: column !important;
+    gap: 0.25rem !important;
+    font-size: 0.8rem !important;
+  }
+  .footer-capacity-indicator {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.75rem !important;
   }
 }
 
-/* Accessibility: Focus outlines for keyboard navigation */
+/* --- Extra small screens (<= 480px) --- */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem !important;
+  }
+  h1 {
+    font-size: 1.8rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  .glass-card {
+    padding: 1.25rem !important;
+  }
+  .btn {
+    padding: 0.75rem 1.25rem !important;
+    font-size: 0.85rem !important;
+    min-height: 44px !important;
+  }
+  .hero {
+    padding-top: 7.5rem !important;
+  }
+  .db-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .nodes-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .network-stats-strip {
+    grid-template-columns: 1fr !important;
+  }
+  .process-step {
+    flex: 0 0 90% !important;
+  }
+  .tab-content-card {
+    padding: 1.25rem !important;
+  }
+  .pricing-card {
+    padding: 1.5rem 1rem !important;
+  }
+}
+
+/* Accessibility: Focus outlines */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,

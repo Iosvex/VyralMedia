@@ -16,7 +16,6 @@
   <link rel="preconnect" href="https://www.googletagmanager.com">
   
   <!-- Google Search Console Verification Tag -->
-  <!-- Note: Replace YOUR_VERIFICATION_CODE_HERE with the code provided by GSC after domain verification -->
   <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
   
   <!-- Google Analytics (GA4) -->
@@ -25,7 +24,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    // Note: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID
     gtag('config', 'G-XXXXXXXXXX');
   </script>
   
@@ -96,6 +94,39 @@
     ]
   }
   </script>
+
+  <style>
+    /* ============================================================
+       OVERRIDES FOR TARGET AUDIENCE & PRICING
+       (removes tabs, shows all panels, fixes mobile pricing)
+    ============================================================ */
+    .tabs-nav-container {
+      display: none !important; /* Hide the tab navigation */
+    }
+
+    .tab-panel {
+      display: block !important; /* Show all panels */
+      animation: none !important; /* Remove entrance animation */
+      margin-bottom: 2rem;
+    }
+
+    /* On mobile, force pricing grid to stack vertically without horizontal scroll */
+    @media (max-width: 768px) {
+      .pricing-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        overflow-x: visible !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        scroll-snap-type: none !important;
+      }
+      .pricing-card {
+        flex: none !important;
+        scroll-snap-align: none !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -819,7 +850,7 @@
       </div>
     </section>
 
-    <!-- 9. WHO IT'S FOR SECTION (TABS UI) -->
+    <!-- 9. WHO IT'S FOR SECTION (TABS UI) - NOW ALL PANELS VISIBLE -->
     <section class="whos-it-for section-padding" id="whos-it-for">
       <div class="container">
         <div class="section-header">
@@ -828,18 +859,9 @@
           <p>Select your business model to see how our distribution channels and organic media network directly amplify your numbers.</p>
         </div>
         
-        <!-- Toggle Tabs Nav -->
-        <div class="tabs-nav-container">
-          <ul class="tabs-nav" id="tabs-nav">
-            <li><button class="tab-btn active" data-tab="local-business">Local Business</button></li>
-            <li><button class="tab-btn" data-tab="personal-brand">Personal Brand</button></li>
-            <li><button class="tab-btn" data-tab="ecommerce">E-commerce</button></li>
-            <li><button class="tab-btn" data-tab="influencer">Influencer</button></li>
-            <li><button class="tab-btn" data-tab="startup">Startup</button></li>
-          </ul>
-        </div>
+        <!-- Tabs Navigation Removed - all panels shown below -->
         
-        <!-- Tabs Panels Content -->
+        <!-- Tabs Panels Content - all shown -->
         <div class="tabs-content" id="tabs-content">
           
           <!-- Tab 1: Local Business -->

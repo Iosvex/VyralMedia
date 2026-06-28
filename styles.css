@@ -78,24 +78,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(3.2rem, 7vw, 5.2rem); /* increased */
+  font-size: clamp(3.4rem, 7.5vw, 5.6rem); /* increased */
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(2.6rem, 5.5vw, 3.8rem); /* increased */
+  font-size: clamp(2.8rem, 6vw, 4.2rem); /* increased */
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: clamp(1.4rem, 2.5vw, 1.8rem); /* increased */
+  font-size: clamp(1.6rem, 3vw, 2.2rem); /* increased */
 }
 
 p {
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .highlight-green {
@@ -115,7 +115,7 @@ p {
   flex-direction: column;
   line-height: 1.15;
   margin-bottom: 1.5rem;
-  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
   font-family: var(--font-hero);
   font-weight: 800;
   text-align: left;
@@ -129,7 +129,7 @@ p {
 @media (max-width: 991px) {
   .hero-headline {
     text-align: center;
-    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-size: clamp(2.4rem, 6vw, 4rem);
   }
 }
 
@@ -527,19 +527,19 @@ p {
 .hero-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 2.5rem;
+  gap: 0.8rem 2rem;
   justify-items: start;
 }
 
 @media (max-width: 768px) {
   .hero-features {
-    gap: 0.6rem 1.5rem;
+    gap: 0.5rem 1.2rem;
     justify-items: start;
   }
 }
 @media (max-width: 480px) {
   .hero-features {
-    gap: 0.4rem 1rem;
+    gap: 0.3rem 0.8rem;
     justify-items: start;
   }
 }
@@ -549,18 +549,19 @@ p {
   align-items: center;
   gap: 0.5rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   white-space: nowrap;
 }
-.hero-feature-item svg {
+.hero-feature-item .bullet {
   color: var(--accent);
-  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 480px) {
   .hero-feature-item {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -685,7 +686,7 @@ p {
 
 .section-header .section-tag {
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -694,7 +695,7 @@ p {
 }
 
 .section-header p {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .stats-grid {
@@ -725,7 +726,7 @@ p {
 }
 
 .stat-number {
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(3.2rem, 5.5vw, 4.5rem);
   font-weight: 800;
   color: var(--text-primary);
   font-family: var(--font-headings);
@@ -735,7 +736,7 @@ p {
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
 }
 
@@ -756,7 +757,7 @@ p {
 }
 
 .benefit-card-content h3 {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -770,7 +771,7 @@ p {
 }
 
 .benefit-card-content p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
@@ -919,7 +920,7 @@ p {
 }
 
 .network-stat-card .stat-number-big {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--accent);
   display: block;
@@ -927,7 +928,7 @@ p {
 }
 
 .network-stat-card .stat-description {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
 }
 
@@ -985,13 +986,13 @@ p {
 }
 
 .service-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin-bottom: 0.75rem;
   color: var(--text-primary);
 }
 
 .service-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   color: var(--text-secondary);
 }
@@ -1167,7 +1168,7 @@ p {
 }
 
 .tab-card-title-block h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
@@ -1180,7 +1181,7 @@ p {
 
 .tab-card-sub {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .tab-result-badge {
@@ -1211,7 +1212,7 @@ p {
 }
 
 .tab-card-body p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
 }
 
@@ -1315,12 +1316,12 @@ p {
 }
 
 .process-step h3 {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   margin-bottom: 0.75rem;
 }
 
 .process-step p {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 /* Process Marquee Strip */
@@ -1552,7 +1553,7 @@ p {
 }
 
 .banner-content h3 {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1597,12 +1598,12 @@ p {
 }
 
 .pricing-trust-card h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 0.25rem;
 }
 
 .pricing-trust-card p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 /* --- FAQS SECTION --- */
@@ -1645,7 +1646,7 @@ p {
 
 .faq-question {
   font-family: var(--font-headings);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -1676,7 +1677,7 @@ p {
 
 .faq-answer {
   padding: 0 1.5rem 1.5rem 1.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   border-top: 1px solid transparent;
 }
@@ -1692,12 +1693,12 @@ p {
 }
 
 .faqs-bottom-cta h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .faqs-bottom-cta p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1736,7 +1737,7 @@ p {
 }
 
 .blog-card h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.3;
   margin-bottom: 0.75rem;
 }
@@ -1752,7 +1753,7 @@ p {
 }
 
 .blog-card p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
   flex-grow: 1;
@@ -1792,19 +1793,19 @@ p {
 }
 
 .final-cta-content h2 {
-  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-size: clamp(3.2rem, 6.5vw, 4.8rem);
   font-weight: 900;
   margin-bottom: 1rem;
 }
 
 .final-cta-content .subtext {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
 }
 
 .final-cta-content .lead-text {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   margin-bottom: 3rem;
 }
@@ -1839,7 +1840,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   font-weight: 500;
 }
@@ -1865,7 +1866,7 @@ p {
   color: var(--accent);
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 4rem;
 }
@@ -1880,7 +1881,7 @@ p {
 
 .final-closing-statement {
   font-family: var(--font-headings);
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1.4;
@@ -1890,7 +1891,7 @@ p {
 
 .final-closing-statement span {
   display: block;
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   font-family: var(--font-body);
   font-weight: 400;
@@ -1937,7 +1938,7 @@ p {
 }
 
 .footer-logo-block .desc {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
@@ -1975,7 +1976,7 @@ p {
 
 .footer-col-title {
   font-family: var(--font-headings);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1993,7 +1994,7 @@ p {
 .footer-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -2027,7 +2028,7 @@ p {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   text-decoration: none;
   transition: var(--transition-fast);
@@ -2054,7 +2055,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
 }
 
@@ -2139,18 +2140,18 @@ p {
 
   /* --- Typography (increased) --- */
   h1 {
-    font-size: 2.6rem !important;
+    font-size: 2.8rem !important;
     line-height: 1.15 !important;
   }
   h2 {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
     margin-bottom: 0.75rem !important;
   }
   p {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
   }
   .section-header p {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
   }
 
   /* --- Buttons --- */
@@ -2166,10 +2167,10 @@ p {
     padding-bottom: 3.5rem !important;
   }
   .hero-headline {
-    font-size: 2.4rem !important;
+    font-size: 2.6rem !important;
   }
   .hero-content p {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
     margin-bottom: 1.5rem !important;
   }
   .hero-ctas {
@@ -2189,7 +2190,7 @@ p {
     justify-items: start !important;
   }
   .hero-feature-item {
-    font-size: 0.8rem !important;
+    font-size: 0.85rem !important;
     white-space: nowrap !important;
   }
 
@@ -2223,10 +2224,10 @@ p {
     border-left-width: 3px !important;
   }
   .stat-number {
-    font-size: 2.6rem !important;
+    font-size: 2.8rem !important;
   }
   .stat-label {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
 
   /* --- Cards & Grids --- */
@@ -2243,27 +2244,27 @@ p {
   }
 
   .benefit-card-content h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
   }
   .benefit-card-content p {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
   }
 
   .why-grid .glass-card {
     padding: 1.5rem !important;
   }
   .why-grid h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
   }
 
   .service-card {
     padding: 1.5rem !important;
   }
   .service-card h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.25rem !important;
   }
   .service-card p {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
 
   /* --- Network Nodes --- */
@@ -2302,7 +2303,7 @@ p {
     padding: 1rem !important;
   }
   .network-stat-card .stat-number-big {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
   }
   .network-stat-card .stat-description {
     font-size: 0.85rem !important;
@@ -2330,10 +2331,10 @@ p {
     margin-bottom: 1rem !important;
   }
   .process-step h3 {
-    font-size: 1.2rem !important;
+    font-size: 1.25rem !important;
   }
   .process-step p {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
   }
   .process-marquee {
     gap: 1.5rem !important;
@@ -2372,7 +2373,7 @@ p {
     margin: 3rem auto 3rem !important;
   }
   .pricing-consultation-banner h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
   }
   .pricing-trust-grid {
     grid-template-columns: 1fr !important;
@@ -2382,10 +2383,10 @@ p {
     padding: 1rem !important;
   }
   .pricing-trust-card h4 {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
   }
   .pricing-trust-card p {
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
   }
 
   /* --- Target Audience (Tabs removed) --- */
@@ -2403,10 +2404,10 @@ p {
     padding-bottom: 1rem !important;
   }
   .tab-card-title-block h3 {
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
   }
   .tab-card-sub {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
   }
   .tab-result-badge {
     align-self: flex-start !important;
@@ -2414,7 +2415,7 @@ p {
     padding: 0.3rem 0.75rem !important;
   }
   .tab-card-body p {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
   }
   .tabs-cta-row {
     flex-direction: column !important;
@@ -2462,11 +2463,11 @@ p {
     padding: 1.25rem !important;
   }
   .faq-question {
-    font-size: 1rem !important;
+    font-size: 1.05rem !important;
   }
   .faq-answer {
     padding: 0 1.25rem 1.25rem !important;
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
   .faqs-bottom-cta .btn {
     max-width: 100% !important;
@@ -2481,21 +2482,21 @@ p {
     padding: 1.5rem !important;
   }
   .blog-card h3 {
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
   }
   .blog-card p {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
 
   /* --- Final CTA --- */
   .final-cta-content h2 {
-    font-size: 2.4rem !important;
+    font-size: 2.6rem !important;
   }
   .final-cta-content .subtext {
-    font-size: 1.15rem !important;
+    font-size: 1.2rem !important;
   }
   .final-cta-content .lead-text {
-    font-size: 0.95rem !important;
+    font-size: 1rem !important;
     margin-bottom: 2rem !important;
   }
   .final-cta-buttons {
@@ -2515,7 +2516,7 @@ p {
     margin-bottom: 2rem !important;
   }
   .trust-item-inline {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
   .final-scarcity-box {
     font-size: 0.85rem !important;
@@ -2523,7 +2524,7 @@ p {
     padding: 0.5rem 1rem !important;
   }
   .final-closing-statement {
-    font-size: 1.3rem !important;
+    font-size: 1.4rem !important;
   }
 
   /* --- Footer --- */
@@ -2539,7 +2540,7 @@ p {
     grid-column: span 1 !important;
   }
   .footer-logo-block .desc {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
   .footer-col-title {
     margin-bottom: 1rem !important;
@@ -2548,7 +2549,7 @@ p {
     gap: 0.75rem !important;
   }
   .footer-link, .footer-info-item {
-    font-size: 0.9rem !important;
+    font-size: 0.95rem !important;
   }
   .footer-divider {
     margin-bottom: 1.5rem !important;
@@ -2561,7 +2562,7 @@ p {
   .footer-bottom-left {
     flex-direction: column !important;
     gap: 0.25rem !important;
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
   }
   .footer-capacity-indicator {
     font-size: 0.7rem !important;
@@ -2575,10 +2576,10 @@ p {
     padding: 0 1rem !important;
   }
   h1 {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
   }
   h2 {
-    font-size: 1.9rem !important;
+    font-size: 2.1rem !important;
   }
   .glass-card {
     padding: 1.25rem !important;
@@ -2592,7 +2593,7 @@ p {
     padding-top: 7.5rem !important;
   }
   .hero-headline {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
   .db-grid {
     grid-template-columns: 1fr 1fr !important;
@@ -2619,7 +2620,7 @@ p {
     gap: 0.3rem 0.8rem !important;
   }
   .hero-feature-item {
-    font-size: 0.7rem !important;
+    font-size: 0.75rem !important;
   }
 }
 

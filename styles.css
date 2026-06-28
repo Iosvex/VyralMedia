@@ -78,19 +78,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(3.4rem, 7.5vw, 5.6rem); /* increased */
+  font-size: clamp(3.4rem, 7.5vw, 5.6rem);
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(2.8rem, 6vw, 4.2rem); /* increased */
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem); /* increased */
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
 }
 
 p {
@@ -534,13 +534,13 @@ p {
 @media (max-width: 768px) {
   .hero-features {
     gap: 0.5rem 1.2rem;
-    justify-items: start;
+    justify-items: center;
   }
 }
 @media (max-width: 480px) {
   .hero-features {
     gap: 0.3rem 0.8rem;
-    justify-items: start;
+    justify-items: center;
   }
 }
 
@@ -671,6 +671,16 @@ p {
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+/* Hide extra dashboard fluff on mobile */
+@media (max-width: 768px) {
+  .db-card-change {
+    display: none !important;
+  }
+  .db-card-value {
+    font-size: 1.4rem !important;
+  }
 }
 
 /* --- SOCIAL PROOF & STATS --- */
@@ -2184,17 +2194,18 @@ p {
     max-width: 100% !important;
     justify-content: center !important;
   }
+  /* Center features on mobile */
   .hero-features {
     grid-template-columns: 1fr 1fr !important;
     gap: 0.5rem 1.2rem !important;
-    justify-items: start !important;
+    justify-items: center !important;
   }
   .hero-feature-item {
     font-size: 0.85rem !important;
     white-space: nowrap !important;
   }
 
-  /* --- Dashboard: Force 2 columns always --- */
+  /* --- Dashboard: clean up on mobile --- */
   .dashboard-mockup {
     padding: 1rem !important;
     border-radius: 12px !important;
@@ -2211,7 +2222,10 @@ p {
     padding: 0.75rem !important;
   }
   .db-card-value {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
+  }
+  .db-card-change {
+    display: none !important; /* hides % and Target Active */
   }
 
   /* --- Social Proof Stats --- */

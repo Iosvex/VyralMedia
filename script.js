@@ -1,18 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // --- LENIS SMOOTH SCROLL ---
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+    wheelMultiplier: 1,
+    touchMultiplier: 1.5,
+  });
+
+  // Run Lenis in requestAnimationFrame loop
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
   // --- STICKY NAV BACKGROUND ---
   const headerWrapper = document.getElementById('header-wrapper');
   
   const handleScroll = () => {
-    if (window.scrollY > 40) {
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (scrollY > 40) {
       headerWrapper.classList.add('scrolled');
     } else {
       headerWrapper.classList.remove('scrolled');
     }
   };
   
+  // Use Lenis's scroll event if available, else fallback to window scroll
+  lenis.on('scroll', handleScroll);
   window.addEventListener('scroll', handleScroll);
-  handleScroll(); // Initial check on load
+  handleScroll();
 
   // --- MOBILE HAMBURGER MENU ---
   const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -24,13 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hamburgerBtn.classList.toggle('active');
     navMenuMobile.classList.toggle('active');
     mobileOverlay.classList.toggle('active');
-    
-    // Prevent background scrolling when menu is open
-    if (navMenuMobile.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = navMenuMobile.classList.contains('active') ? 'hidden' : '';
   };
 
   hamburgerBtn.addEventListener('click', toggleMobileMenu);
@@ -38,12 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
-      // Small timeout to allow anchor scroll trigger to fire before closing
       setTimeout(toggleMobileMenu, 250);
     });
   });
 
-  // --- FAQ ACCORDION ANIMATION ---
+  // --- FAQ ACCORDION ---
   const faqItems = document.querySelectorAll('#faqs-accordion .faq-item');
 
   faqItems.forEach(item => {
@@ -52,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     trigger.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-      
-      // Optional: Close all other FAQ items (Accordion mode)
       faqItems.forEach(otherItem => {
         if (otherItem !== item && otherItem.classList.contains('active')) {
           otherItem.classList.remove('active');
@@ -66,30 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
         content.style.maxHeight = '0px';
       } else {
         item.classList.add('active');
-        // Set max-height to the exact scrollHeight of content for smooth CSS transition
         content.style.maxHeight = content.scrollHeight + 'px';
       }
     });
   });
 
-  // --- STATS COUNT-UP INTERSECTION OBSERVER ---
+  // --- STATS COUNT-UP ---
   const statNumbers = document.querySelectorAll('.stat-number');
   
   const animateCount = (element) => {
     const target = parseInt(element.getAttribute('data-target'), 10);
     const suffix = element.getAttribute('data-suffix') || '';
-    const duration = 1500; // Animation duration in milliseconds
+    const duration = 1500;
     const startTime = performance.now();
     
     const updateCount = (currentTime) => {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
-      
-      // Easing function (easeOutQuad)
       const easeProgress = progress * (2 - progress);
       const currentValue = Math.floor(easeProgress * target);
       
-      // Formatting values nicely (e.g. adding commas for larger numbers like 8700)
       if (target >= 1000) {
         element.textContent = currentValue.toLocaleString() + suffix;
       } else {
@@ -110,34 +118,27 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(updateCount);
   };
 
-  const observerOptions = {
-    root: null, // viewport
-    threshold: 0.15 // trigger when 15% of element is visible
-  };
-
-  const statsObserver = new IntersectionObserver((entries, observer) => {
+  const observerOptions = { root: null, threshold: 0.15 };
+  const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         animateCount(entry.target);
-        observer.unobserve(entry.target); // Animate only once
+        statsObserver.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  statNumbers.forEach(num => {
-    statsObserver.observe(num);
-  });
+  statNumbers.forEach(num => statsObserver.observe(num));
 
-  // --- ACTIVE NAV LINK HIGHLIGHT ON SCROLL ---
+  // --- ACTIVE NAV LINK ---
   const sections = document.querySelectorAll('section[id]');
   const desktopLinks = document.querySelectorAll('.nav-menu-desktop .nav-link');
 
   const highlightNav = () => {
-    const scrollY = window.scrollY;
-    
+    const scrollY = window.scrollY || window.pageYOffset;
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 150; // offset for nav header heights
+      const sectionTop = current.offsetTop - 150;
       const sectionId = current.getAttribute('id');
       
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -151,6 +152,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Use Lenis scroll event for smoother highlighting
+  lenis.on('scroll', highlightNav);
   window.addEventListener('scroll', highlightNav);
 
+  // --- INTERSECTION OBSERVER FOR CARD ANIMATIONS ---
+  const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+  const animationObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Optional: once visible, stop observing to save performance
+        // animationObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  animateElements.forEach(el => animationObserver.observe(el));
 });

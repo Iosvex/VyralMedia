@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
@@ -253,6 +253,7 @@ p {
   justify-content: center;
   align-items: center;
   min-height: 36px;
+  text-align: center;
 }
 
 .announcement-inner {
@@ -262,6 +263,17 @@ p {
   font-size: 0.82rem;
   font-weight: 500;
   line-height: 1.4;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .announcement-inner {
+    font-size: 0.7rem;
+    white-space: normal;
+  }
 }
 
 .announcement-bar .rocket-icon {
@@ -454,12 +466,22 @@ p {
   .hero .trust-badge {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem; /* fix #2: move down */
   }
 }
 
 .hero-content h1 {
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 1.5rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  .hero-content h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
 }
 
 .hero-content p {
@@ -487,9 +509,9 @@ p {
 }
 
 .hero-features {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .hero-feature-item {
@@ -497,7 +519,7 @@ p {
   align-items: center;
   gap: 0.5rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
 }
 
@@ -508,6 +530,13 @@ p {
 @media (max-width: 991px) {
   .hero-features {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-features {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
   }
 }
 
@@ -579,7 +608,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0; /* removed chart */
 }
 
 .db-card {
@@ -619,42 +648,7 @@ p {
   gap: 0.25rem;
 }
 
-.db-chart-container {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1.25rem;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.db-chart-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.db-chart-svg {
-  width: 100%;
-  height: 60px;
-}
-
-.chart-line {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: draw-chart 3s forwards cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes draw-chart {
-  to { stroke-dashoffset: 0; }
-}
-
-.chart-gradient {
-  opacity: 0.15;
-}
+/* Removed db-chart-container */
 
 /* --- SOCIAL PROOF & STATS --- */
 .social-proof {
@@ -902,14 +896,16 @@ p {
   transition: var(--transition-fast);
 }
 
-.network-stat-card h4 {
-  font-size: 1.75rem;
+.network-stat-card .stat-number-big {
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--accent);
-  margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
-.network-stat-card p {
-  font-size: 0.9rem;
+.network-stat-card .stat-description {
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
@@ -1245,11 +1241,22 @@ p {
 
 @media (max-width: 768px) {
   .process-timeline {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    padding-bottom: 0 !important;
   }
   .process-timeline::before {
     display: none;
+  }
+  .process-step {
+    flex: none !important;
+    scroll-snap-align: none !important;
+    padding: 1rem !important;
+    border: none !important;
+    background: transparent !important;
   }
 }
 
@@ -1390,7 +1397,7 @@ p {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  padding: 3rem 2.25rem 2.5rem;
+  padding: 2.5rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1443,8 +1450,8 @@ p {
 
 .plan-header {
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .plan-title {
@@ -1465,7 +1472,7 @@ p {
 
 .plan-price {
   font-family: var(--font-headings);
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
   color: var(--text-primary);
   display: flex;
@@ -1482,8 +1489,8 @@ p {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
   flex-grow: 1;
 }
 
@@ -1491,7 +1498,7 @@ p {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
 }
 
@@ -1533,6 +1540,7 @@ p {
     text-align: center;
     gap: 1.5rem;
     padding: 2rem;
+    margin-top: 3rem; /* extra spacing fix #10 */
   }
 }
 
@@ -2086,6 +2094,7 @@ p {
   /* --- Typography --- */
   h1 {
     font-size: 2.2rem !important;
+    line-height: 1.15 !important;
   }
   h2 {
     font-size: 1.8rem !important;
@@ -2112,6 +2121,7 @@ p {
   }
   .hero-content h1 {
     margin-bottom: 0.75rem !important;
+    font-size: 2rem !important;
   }
   .hero-content p {
     font-size: 1rem !important;
@@ -2129,8 +2139,8 @@ p {
     justify-content: center !important;
   }
   .hero-features {
+    grid-template-columns: 1fr 1fr !important;
     gap: 0.75rem !important;
-    justify-content: center !important;
   }
   .hero-feature-item {
     font-size: 0.8rem !important;
@@ -2154,13 +2164,6 @@ p {
   }
   .db-card-value {
     font-size: 1.1rem !important;
-  }
-  .db-chart-container {
-    padding: 0.75rem !important;
-    height: 100px !important;
-  }
-  .db-chart-svg {
-    height: 45px !important;
   }
 
   /* --- Social Proof Stats --- */
@@ -2251,30 +2254,27 @@ p {
   .network-stat-card {
     padding: 1rem !important;
   }
-  .network-stat-card h4 {
-    font-size: 1.3rem !important;
+  .network-stat-card .stat-number-big {
+    font-size: 1.6rem !important;
+  }
+  .network-stat-card .stat-description {
+    font-size: 0.8rem !important;
   }
 
   /* --- Process --- */
   .process-timeline {
-    display: flex !important;
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory !important;
-    gap: 1.25rem !important;
-    padding-bottom: 1rem !important;
-    scrollbar-width: none !important;
-    margin-bottom: 2.5rem !important;
-  }
-  .process-timeline::-webkit-scrollbar {
-    display: none !important;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    padding-bottom: 0 !important;
   }
   .process-step {
-    flex: 0 0 85% !important;
-    scroll-snap-align: center !important;
-    padding: 1.25rem !important;
-    border: 1px solid var(--border-color) !important;
-    border-radius: 14px !important;
-    background: var(--bg-secondary) !important;
+    padding: 1rem !important;
+    border: none !important;
+    background: transparent !important;
+    flex: none !important;
   }
   .step-number {
     width: 50px !important;
@@ -2296,7 +2296,7 @@ p {
   .pricing-grid {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 2.5rem !important;
+    gap: 2rem !important;
     padding: 0 !important;
     margin: 0 !important;
     overflow-x: visible !important;
@@ -2304,7 +2304,7 @@ p {
     max-width: 100% !important;
   }
   .pricing-card {
-    padding: 2rem 1.5rem !important;
+    padding: 1.75rem 1.5rem !important;
     flex: none !important;
     scroll-snap-align: none !important;
   }
@@ -2322,7 +2322,7 @@ p {
     text-align: center !important;
     gap: 1.5rem !important;
     padding: 1.5rem !important;
-    margin-bottom: 3rem !important;
+    margin: 3rem auto 3rem !important;
   }
   .pricing-consultation-banner h3 {
     font-size: 1.2rem !important;
@@ -2556,8 +2556,8 @@ p {
   .network-stats-strip {
     grid-template-columns: 1fr !important;
   }
-  .process-step {
-    flex: 0 0 90% !important;
+  .process-timeline {
+    grid-template-columns: 1fr !important;
   }
   .tab-content-card {
     padding: 1.25rem !important;

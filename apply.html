@@ -8,23 +8,15 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://vyralmedia.in/apply.html">
   
-  <!-- Google Search Console Verification Tag -->
   <meta name="google-site-verification" content="zM5Bgi4bt-5BUdZvR5xK7IEdUK-Fsq2DMTVxGjwrdNs">
 
-  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
 
   <style>
-    /* ============================================================
-       DESIGN SYSTEM — mirrors main site exactly
-    ============================================================ */
+    /* Same as before but with enhanced visual improvements */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
     :root {
@@ -76,9 +68,6 @@
     ::-webkit-scrollbar-thumb { background: var(--bg-tertiary); border: 2px solid var(--bg-pure); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-    /* ============================================================
-       BACKGROUND AMBIENCE
-    ============================================================ */
     .bg-gradient-orb {
       position: fixed;
       inset: 0;
@@ -108,9 +97,6 @@
       filter: blur(60px);
     }
 
-    /* ============================================================
-       NAV
-    ============================================================ */
     .top-nav {
       position: fixed;
       top: 0;
@@ -151,9 +137,6 @@
     .back-link svg { transition: var(--transition-fast); }
     .back-link:hover svg { transform: translateX(-3px); }
 
-    /* ============================================================
-       PAGE LAYOUT
-    ============================================================ */
     .page-wrapper {
       position: relative;
       z-index: 1;
@@ -172,9 +155,6 @@
       padding: 3rem 1.5rem 4rem;
     }
 
-    /* ============================================================
-       PROGRESS BAR
-    ============================================================ */
     .progress-wrap {
       margin-bottom: 2.5rem;
     }
@@ -216,9 +196,6 @@
       box-shadow: 0 0 12px rgba(130,238,45,0.4);
     }
 
-    /* ============================================================
-       STEP CARD
-    ============================================================ */
     .step-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -236,38 +213,35 @@
     }
 
     .step-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
       background: rgba(130,238,45,0.08);
       border: 1px solid var(--border-accent);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1.25rem;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       line-height: 1;
     }
 
     .step-title {
       font-family: var(--font-headings);
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1.6rem;
+      font-weight: 800;
       color: var(--text-primary);
       margin-bottom: 0.35rem;
       letter-spacing: -0.02em;
     }
 
     .step-subtitle {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-secondary);
       margin-bottom: 1.75rem;
       line-height: 1.5;
     }
 
-    /* ============================================================
-       FORM FIELDS
-    ============================================================ */
     .field-group {
       display: flex;
       flex-direction: column;
@@ -336,9 +310,6 @@
     .field select { cursor: pointer; padding-right: 2.5rem; }
     .field select option { background: var(--bg-secondary); color: var(--text-primary); }
 
-    /* ============================================================
-       CHOICE GRID (single / multi select)
-    ============================================================ */
     .choices-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -418,12 +389,8 @@
       transform: rotate(-45deg) translateY(-1px);
     }
 
-    /* Full-width grid options */
     .choices-grid.cols-1 { grid-template-columns: 1fr; }
 
-    /* ============================================================
-       BUTTONS
-    ============================================================ */
     .btn-row {
       display: flex;
       align-items: center;
@@ -473,9 +440,6 @@
 
     .btn-full { width: 100%; }
 
-    /* ============================================================
-       VALIDATION ERROR
-    ============================================================ */
     .field-error {
       font-size: 0.78rem;
       color: #ff6b6b;
@@ -498,13 +462,10 @@
     }
     .error-msg.show { display: block; }
 
-    /* ============================================================
-       FINAL SCREEN
-    ============================================================ */
     .final-screen {
       display: none;
       text-align: center;
-      padding: 3rem 2.5rem;
+      padding: 3.5rem 2.5rem;
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
       border-radius: 20px;
@@ -514,21 +475,21 @@
     .final-screen.active { display: block; }
 
     .final-icon-wrap {
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
       background: rgba(130,238,45,0.1);
       border: 1px solid var(--border-accent);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 1.5rem;
-      font-size: 2rem;
+      font-size: 2.4rem;
     }
 
     .final-title {
       font-family: var(--font-headings);
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       color: var(--text-primary);
       letter-spacing: -0.03em;
@@ -578,29 +539,20 @@
       color: var(--text-muted);
     }
 
-    /* ============================================================
-       NOTION-STYLE EMOJI — uses text rendering
-    ============================================================ */
     .notion-emoji {
       font-style: normal;
       font-variant-emoji: text;
       font-family: 'Segoe UI Emoji', 'Noto Emoji', sans-serif;
     }
 
-    /* ============================================================
-       STEP DIVIDER
-    ============================================================ */
     .step-divider {
       height: 1px;
       background: var(--border-color);
       margin: 1.5rem 0;
     }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
     @media (max-width: 600px) {
-      .form-container { padding: 2rem 1rem 3rem; }
+      .form-container { padding: 1.5rem 1rem 3rem; }
       .step-card { padding: 1.75rem 1.25rem; }
       .choices-grid { 
         grid-template-columns: 1fr; 
@@ -634,15 +586,15 @@
         padding: 0.7rem 1rem;
         font-size: 0.8rem;
       }
+      .step-title { font-size: 1.3rem; }
+      .step-subtitle { font-size: 0.85rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background ambience -->
   <div class="bg-gradient-orb" aria-hidden="true"></div>
 
-  <!-- Nav -->
   <nav class="top-nav" aria-label="Apply page navigation">
     <a href="index.html" class="logo" aria-label="Vyral Media — Back to home">
       <img src="logo.png" alt="Vyral Media Logo">
@@ -653,11 +605,9 @@
     </a>
   </nav>
 
-  <!-- Page wrapper -->
   <div class="page-wrapper">
     <div class="form-container">
 
-      <!-- Progress -->
       <div class="progress-wrap" id="progress-wrap">
         <div class="progress-header">
           <span class="step-label" id="step-label">Step 1 of 5</span>
@@ -668,11 +618,11 @@
         </div>
       </div>
 
-      <!-- ─── STEP 1: BASIC INFORMATION ─── -->
+      <!-- STEP 1 -->
       <div class="step-card active" id="step-1" role="form" aria-labelledby="step1-title">
         <div class="step-icon" aria-hidden="true"><span class="notion-emoji">👤</span></div>
-        <h1 class="step-title" id="step1-title">Basic Information</h1>
-        <p class="step-subtitle">Let us know who you are so we can personalise your strategy call.</p>
+        <h1 class="step-title" id="step1-title">You're One Step Away</h1>
+        <p class="step-subtitle">Let's scale your brand. Tell us who you are so we can personalise your strategy call.</p>
 
         <div class="error-msg" id="step1-error">Please fill in all required fields correctly.</div>
 
@@ -707,7 +657,7 @@
         </div>
       </div>
 
-      <!-- ─── STEP 2: BUSINESS TYPE ─── -->
+      <!-- STEP 2 -->
       <div class="step-card" id="step-2" role="form" aria-labelledby="step2-title">
         <div class="step-icon" aria-hidden="true"><span class="notion-emoji">🏢</span></div>
         <h2 class="step-title" id="step2-title">Business Type</h2>
@@ -757,7 +707,7 @@
         </div>
       </div>
 
-      <!-- ─── STEP 3: CURRENT SITUATION ─── -->
+      <!-- STEP 3 -->
       <div class="step-card" id="step-3" role="form" aria-labelledby="step3-title">
         <div class="step-icon" aria-hidden="true"><span class="notion-emoji">📊</span></div>
         <h2 class="step-title" id="step3-title">Current Situation</h2>
@@ -807,7 +757,7 @@
         </div>
       </div>
 
-      <!-- ─── STEP 4: BUDGET QUALIFIER ─── -->
+      <!-- STEP 4 -->
       <div class="step-card" id="step-4" role="form" aria-labelledby="step4-title">
         <div class="step-icon" aria-hidden="true"><span class="notion-emoji">💰</span></div>
         <h2 class="step-title" id="step4-title">Budget Qualifier</h2>
@@ -847,7 +797,7 @@
         </div>
       </div>
 
-      <!-- ─── STEP 5: MAIN GOAL ─── -->
+      <!-- STEP 5 -->
       <div class="step-card" id="step-5" role="form" aria-labelledby="step5-title">
         <div class="step-icon" aria-hidden="true"><span class="notion-emoji">🎯</span></div>
         <h2 class="step-title" id="step5-title">Main Goal</h2>
@@ -897,7 +847,7 @@
         </div>
       </div>
 
-      <!-- ─── FINAL SCREEN ─── -->
+      <!-- FINAL SCREEN -->
       <div class="final-screen" id="final-screen" role="region" aria-labelledby="final-title">
         <div class="final-icon-wrap" aria-hidden="true"><span class="notion-emoji" style="font-size:2.2rem">🚀</span></div>
         <h2 class="final-title" id="final-title">Perfect. Let's Build Your<br><span>Growth Plan.</span></h2>
@@ -909,8 +859,8 @@
         <p class="privacy-note">We respect your privacy. Your information will only be used to contact you about your strategy call.</p>
       </div>
 
-    </div><!-- /form-container -->
-  </div><!-- /page-wrapper -->
+    </div>
+  </div>
 
   <script>
     /* ============================================================
@@ -959,7 +909,6 @@
     }
 
     function nextStep(from) {
-      // Validate before advancing
       if (!validate(from)) return;
       collectData(from);
 
@@ -1079,7 +1028,6 @@
       });
       el.classList.add('selected');
       el.setAttribute('aria-checked', 'true');
-      // Hide error on selection
       const errId = 'step' + getStepForGroup(group) + '-error';
       const errEl = document.getElementById(errId);
       if (errEl) errEl.classList.remove('show');
@@ -1089,7 +1037,6 @@
       const isSelected = el.classList.contains('selected');
       el.classList.toggle('selected');
       el.setAttribute('aria-checked', isSelected ? 'false' : 'true');
-      // Hide error if at least one selected
       const sels = document.querySelectorAll('#goal-choices .choice-item.selected');
       if (sels.length > 0) document.getElementById('step5-error').classList.remove('show');
     }
@@ -1099,7 +1046,6 @@
       return map[group] || 1;
     }
 
-    /* Keyboard accessibility for choice items */
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         const el = e.target;
@@ -1110,16 +1056,11 @@
       }
     });
 
-    /* ============================================================
-       FINAL SCREEN
-    ============================================================ */
     function showFinal() {
-      // Hide all steps and progress
       document.querySelectorAll('.step-card').forEach(c => c.classList.remove('active'));
       document.getElementById('progress-wrap').style.display = 'none';
       document.getElementById('final-screen').classList.add('active');
 
-      // Build WhatsApp pre-filled message
       const goals = formData.goals.join(', ');
       const msg = [
         `Hi Vyral Media! I'd like to book a free strategy call.`,
@@ -1141,13 +1082,9 @@
 
       const encoded = encodeURIComponent(msg);
       document.getElementById('whatsapp-cta').href = `https://wa.me/919897303727?text=${encoded}`;
-
       document.getElementById('final-screen').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    /* ============================================================
-       INIT
-    ============================================================ */
     updateProgress(1);
   </script>
 </body>

@@ -96,21 +96,15 @@
   </script>
 
   <style>
-    /* ============================================================
-       OVERRIDES FOR TARGET AUDIENCE & PRICING
-       (removes tabs, shows all panels, fixes mobile pricing)
-    ============================================================ */
+    /* Overrides for target audience & pricing */
     .tabs-nav-container {
-      display: none !important; /* Hide the tab navigation */
+      display: none !important;
     }
-
     .tab-panel {
-      display: block !important; /* Show all panels */
-      animation: none !important; /* Remove entrance animation */
+      display: block !important;
+      animation: none !important;
       margin-bottom: 2rem;
     }
-
-    /* On mobile, force pricing grid to stack vertically without horizontal scroll */
     @media (max-width: 768px) {
       .pricing-grid {
         display: grid !important;
@@ -158,7 +152,7 @@
           <li><a href="#network" class="nav-link">Network</a></li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#faqs" class="nav-link">FAQs</a></li>
-          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         
@@ -186,7 +180,7 @@
       <li><a href="#network" class="nav-link mobile-link">Network</a></li>
       <li><a href="#pricing" class="nav-link mobile-link">Pricing</a></li>
       <li><a href="#faqs" class="nav-link mobile-link">FAQs</a></li>
-      <li><a href="#blog" class="nav-link mobile-link">Blog</a></li>
+      <li><a href="blog.html" class="nav-link mobile-link">Blog</a></li>
       <li><a href="#contact" class="nav-link mobile-link">Contact</a></li>
     </ul>
     
@@ -199,11 +193,10 @@
 
   <main>
     
-    <!-- 2. HERO SECTION -->
+    <!-- HERO SECTION -->
     <section class="hero section-padding" id="home">
       <div class="container hero-grid">
         <div class="hero-content">
-          <!-- Trust Badge -->
           <div class="trust-badge" id="hero-trust-badge">
             <span></span> Content &bull; Distribution &bull; Growth
           </div>
@@ -261,7 +254,7 @@
               <!-- Metric 1 -->
               <div class="db-card">
                 <div class="db-card-label">Monthly Reach</div>
-                <div class="db-card-value">12.4M</div>
+                <div class="db-card-value">21.3M</div>
                 <div class="db-card-change">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
                   +247%
@@ -294,27 +287,13 @@
                 </div>
               </div>
             </div>
-            
-            <!-- Graphic Chart Visual -->
-            <div class="db-chart-container">
-              <div class="db-chart-label">Combined Platform Growth (Traffic Floods)</div>
-              <svg class="db-chart-svg" viewBox="0 0 300 60">
-                <defs>
-                  <linearGradient id="chartGlow" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.25"/>
-                    <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
-                  </linearGradient>
-                </defs>
-                <path class="chart-gradient" d="M 0 55 L 20 48 L 40 50 L 60 42 L 80 44 L 100 32 L 120 38 L 140 25 L 160 28 L 180 15 L 200 18 L 220 8 L 240 10 L 260 2 L 280 4 L 300 1 L 300 60 L 0 60 Z" fill="url(#chartGlow)"/>
-                <path class="chart-line" d="M 0 55 L 20 48 L 40 50 L 60 42 L 80 44 L 100 32 L 120 38 L 140 25 L 160 28 L 180 15 L 200 18 L 220 8 L 240 10 L 260 2 L 280 4 L 300 1" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
+            <!-- Chart removed -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 3. SOCIAL PROOF SECTION -->
+    <!-- SOCIAL PROOF SECTION -->
     <section class="social-proof section-padding" id="social-proof">
       <div class="container">
         <div class="section-header">
@@ -352,7 +331,7 @@
       </div>
     </section>
 
-    <!-- 4. VYRALMEDIA BENEFITS SECTION -->
+    <!-- BENEFITS SECTION -->
     <section class="benefits section-padding" id="benefits">
       <div class="container">
         <div class="section-header">
@@ -426,7 +405,7 @@
       </div>
     </section>
 
-    <!-- 5. THE VYRALMEDIA NETWORK SECTION -->
+    <!-- NETWORK SECTION -->
     <section class="network section-padding" id="network">
       <div class="container">
         <div class="section-header">
@@ -435,7 +414,6 @@
           <p>While most brands rely on a single channel for visibility, Vyral Media provides direct access to a growing network of audience assets, content systems and strategic distribution channels.</p>
         </div>
         
-        <!-- Interactive Node Connection Funnel layout -->
         <div class="network-showcase-container">
           <div class="network-nodes-flow" id="network-nodes-flow">
             <!-- 8 Theme Pages nodes -->
@@ -578,7 +556,6 @@
               </div>
             </div>
             
-            <!-- Funnel arrow container -->
             <div class="network-funnel">
               <svg class="funnel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -586,32 +563,31 @@
               </svg>
             </div>
             
-            <!-- Central Node targeting user's brand -->
             <div class="target-brand-node" id="target-brand-node">
               Your Brand
             </div>
           </div>
           
-          <!-- Summary statistics strip below node system -->
+          <!-- Network Stats Strip -->
           <div class="network-stats-strip">
             <div class="network-stat-card">
-              <h3>$0</h3>
-              <p>Ad Spend Required &bull; Organic leverage replaces paid ads budget.</p>
+              <span class="stat-number-big">$0</span>
+              <span class="stat-description">Ad Spend Required</span>
             </div>
             <div class="network-stat-card">
-              <h3>200K+</h3>
-              <p>Combined Daily Reach &bull; Direct visibility in target niches every day.</p>
+              <span class="stat-number-big">200K+</span>
+              <span class="stat-description">Combined Daily Reach</span>
             </div>
             <div class="network-stat-card">
-              <h3>42+</h3>
-              <p>Content Pieces / Day &bull; Continuous organic assets output.</p>
+              <span class="stat-number-big">42+</span>
+              <span class="stat-description">Content Pieces / Day</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 6. WHY THEME PAGES WORK SECTION -->
+    <!-- WHY THEME PAGES WORK -->
     <section class="why-theme-pages section-padding" id="why-theme-pages">
       <div class="container">
         <div class="section-header">
@@ -657,7 +633,7 @@
       </div>
     </section>
 
-    <!-- 7. SERVICES SECTION -->
+    <!-- SERVICES SECTION -->
     <section class="services section-padding" id="services">
       <div class="container">
         <div class="section-header">
@@ -747,7 +723,7 @@
       </div>
     </section>
 
-    <!-- 8. THE MASSIVE DIFFERENCE (COMPARISON) -->
+    <!-- COMPARISON -->
     <section class="difference section-padding" id="difference">
       <div class="container">
         <div class="section-header">
@@ -850,7 +826,7 @@
       </div>
     </section>
 
-    <!-- 9. WHO IT'S FOR SECTION (TABS UI) - NOW ALL PANELS VISIBLE -->
+    <!-- WHO IT'S FOR (ALL PANELS VISIBLE) -->
     <section class="whos-it-for section-padding" id="whos-it-for">
       <div class="container">
         <div class="section-header">
@@ -859,12 +835,8 @@
           <p>Select your business model to see how our distribution channels and organic media network directly amplify your numbers.</p>
         </div>
         
-        <!-- Tabs Navigation Removed - all panels shown below -->
-        
-        <!-- Tabs Panels Content - all shown -->
         <div class="tabs-content" id="tabs-content">
-          
-          <!-- Tab 1: Local Business -->
+          <!-- Local Business -->
           <div class="tab-panel active" id="local-business">
             <div class="tab-content-card">
               <div class="tab-card-header">
@@ -891,8 +863,7 @@
               </div>
             </div>
           </div>
-          
-          <!-- Tab 2: Personal Brand -->
+          <!-- Personal Brand -->
           <div class="tab-panel" id="personal-brand">
             <div class="tab-content-card">
               <div class="tab-card-header">
@@ -919,8 +890,7 @@
               </div>
             </div>
           </div>
-          
-          <!-- Tab 3: E-commerce -->
+          <!-- E-commerce -->
           <div class="tab-panel" id="ecommerce">
             <div class="tab-content-card">
               <div class="tab-card-header">
@@ -947,8 +917,7 @@
               </div>
             </div>
           </div>
-          
-          <!-- Tab 4: Influencer -->
+          <!-- Influencer -->
           <div class="tab-panel" id="influencer">
             <div class="tab-content-card">
               <div class="tab-card-header">
@@ -975,8 +944,7 @@
               </div>
             </div>
           </div>
-          
-          <!-- Tab 5: Startup -->
+          <!-- Startup -->
           <div class="tab-panel" id="startup">
             <div class="tab-content-card">
               <div class="tab-card-header">
@@ -1003,12 +971,11 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
 
-    <!-- 10. HOW IT WORKS SECTION (PROCESS) -->
+    <!-- PROCESS -->
     <section class="process section-padding" id="process">
       <div class="container">
         <div class="section-header">
@@ -1018,19 +985,16 @@
         </div>
         
         <div class="process-timeline">
-          <!-- Step 1 -->
           <div class="process-step">
             <div class="step-number">01</div>
             <h3>We Analyse & Build Your Strategy</h3>
             <p>A free 20-minute strategy call to understand your brand, target audience, and goals, then we build your custom scaling blueprint.</p>
           </div>
-          <!-- Step 2 -->
           <div class="process-step">
             <div class="step-number">02</div>
             <h3>We Create, Manage & Execute</h3>
             <p>Our team handles writing scripts, styling hooks, high-retention video editing, daily posting, and engagement metrics tracking. Dedicated theme pages start building immediately for Pro and Max clients.</p>
           </div>
-          <!-- Step 3 -->
           <div class="process-step">
             <div class="step-number">03</div>
             <h3>Traffic Floods Your Brand</h3>
@@ -1038,10 +1002,8 @@
           </div>
         </div>
         
-        <!-- Connected Process Strip -->
         <div class="process-strip-container">
           <div class="process-marquee">
-            <!-- Double instances for loop -->
             <div class="marquee-item"><span class="marquee-rocket">🚀</span> Free Call</div>
             <div class="marquee-arrow">&rarr;</div>
             <div class="marquee-item">Proposal Sent</div>
@@ -1053,7 +1015,6 @@
             <div class="marquee-item"><span class="highlight-green">Results Start Flowing</span></div>
             <div class="marquee-arrow">&rarr;</div>
             
-            <!-- Loop mirror -->
             <div class="marquee-item"><span class="marquee-rocket">🚀</span> Free Call</div>
             <div class="marquee-arrow">&rarr;</div>
             <div class="marquee-item">Proposal Sent</div>
@@ -1069,11 +1030,9 @@
       </div>
     </section>
 
-    <!-- 11. PRICING SECTION -->
+    <!-- PRICING -->
     <section class="pricing section-padding" id="pricing">
       <div class="container">
-        
-        <!-- Scarcity Indicator Strip -->
         <div class="pricing-scarcity-strip">
           <span class="dot"></span>
           We Only Take 5 New Clients Per Month To Maintain The Highest Level Of Quality
@@ -1086,7 +1045,7 @@
         </div>
         
         <div class="pricing-grid">
-          <!-- Card 1: Starter -->
+          <!-- Starter -->
           <div class="pricing-card" id="pricing-starter">
             <div class="plan-header">
               <div class="plan-title">
@@ -1095,180 +1054,68 @@
               </div>
               <div class="plan-price">$299<span>/mo</span></div>
             </div>
-            
             <ul class="plan-features">
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Social Media Management
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Bio & Profile Optimisation
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                30 Posts/Reels Per Month
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Standard Video Editing
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Story & Highlight Management
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Link In Bio Funnel Setup
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Monthly Analytics Report
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Weekly Support
-              </li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Social Media Management</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Bio & Profile Optimisation</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>30 Posts/Reels Per Month</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Standard Video Editing</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Story & Highlight Management</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Link In Bio Funnel Setup</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Monthly Analytics Report</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Weekly Support</li>
             </ul>
-            
-            <a href="apply.html" class="btn btn-secondary btn-full">
-              Get Started
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <a href="apply.html" class="btn btn-secondary btn-full">Get Started <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             <div class="pricing-note">*All plans are customised around your niche, goals and growth stage</div>
           </div>
           
-          <!-- Card 2: Pro -->
+          <!-- Pro -->
           <div class="pricing-card pro-card" id="pricing-pro">
             <span class="popular-badge">Most Popular</span>
             <div class="plan-header">
-              <div class="plan-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                Pro
-              </div>
+              <div class="plan-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Pro</div>
               <div class="plan-price">$499<span>/mo</span></div>
             </div>
-            
             <ul class="plan-features">
-              <li class="plan-feature-item" style="color: var(--text-primary); font-weight:600;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Everything In Starter ✓
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                2 Dedicated Theme Pages
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Theme Page Network Traffic Push
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                60 Posts/Reels Per Month
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Studio-Grade Video Editing
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Viral Hooks & Storytelling
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Automation Setup & Management
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Lead Magnet Creation
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Weekly Analytics Report
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                24/7 Support
-              </li>
+              <li class="plan-feature-item" style="color: var(--text-primary); font-weight:600;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything In Starter ✓</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>2 Dedicated Theme Pages</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Theme Page Network Traffic Push</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>60 Posts/Reels Per Month</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Studio-Grade Video Editing</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Viral Hooks & Storytelling</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Automation Setup & Management</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Lead Magnet Creation</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Weekly Analytics Report</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>24/7 Support</li>
             </ul>
-            
-            <a href="apply.html" class="btn btn-primary btn-full" id="pro-cta-button">
-              Get Started
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <a href="apply.html" class="btn btn-primary btn-full" id="pro-cta-button">Get Started <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             <div class="pricing-note">*All plans are customised around your niche, goals and growth stage</div>
           </div>
           
-          <!-- Card 3: Max -->
+          <!-- Max -->
           <div class="pricing-card" id="pricing-max">
             <div class="plan-header">
-              <div class="plan-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                Max
-              </div>
+              <div class="plan-title"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg> Max</div>
               <div class="plan-price">$999<span>/mo</span></div>
             </div>
-            
             <ul class="plan-features">
-              <li class="plan-feature-item" style="color: var(--text-primary); font-weight:600;">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Everything In Pro ✓
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                5 Dedicated Theme Pages
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Full Network Traffic Push
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                90 Posts/Reels Per Month
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Premium VFX & GFX
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Niche Research & Positioning
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Competitor Analysis & Research
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Influencer Marketing & Partnerships
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Email Marketing Setup & Management
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Dedicated Account Manager
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Weekly Analytics Report
-              </li>
-              <li class="plan-feature-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                24/7 Priority Support
-              </li>
+              <li class="plan-feature-item" style="color: var(--text-primary); font-weight:600;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Everything In Pro ✓</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>5 Dedicated Theme Pages</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Full Network Traffic Push</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>90 Posts/Reels Per Month</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Premium VFX & GFX</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Niche Research & Positioning</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Competitor Analysis & Research</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Influencer Marketing & Partnerships</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Email Marketing Setup & Management</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Dedicated Account Manager</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Weekly Analytics Report</li>
+              <li class="plan-feature-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>24/7 Priority Support</li>
             </ul>
-            
-            <a href="apply.html" class="btn btn-secondary btn-full">
-              Get Started
-              <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <a href="apply.html" class="btn btn-secondary btn-full">Get Started <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
             <div class="pricing-note">*All plans are customised around your niche, goals and growth stage</div>
           </div>
         </div>
         
-        <!-- consultation banner -->
         <div class="pricing-consultation-banner">
           <div class="banner-content">
             <h3>Not Sure Which Plan Is Right For You?</h3>
@@ -1280,30 +1127,23 @@
           </a>
         </div>
         
-        <!-- Trust checklist cards -->
         <div class="pricing-trust-grid">
           <div class="pricing-trust-card">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            </div>
+            <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
             <div>
               <h3>No Long-Term Contracts</h3>
               <p>Work with us because you want to, not because you're locked into monthly retainers.</p>
             </div>
           </div>
           <div class="pricing-trust-card">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
+            <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
             <div>
               <h3>No Hidden Fees</h3>
               <p>Transparent pricing frameworks with zero unexpected charges or setup fees.</p>
             </div>
           </div>
           <div class="pricing-trust-card">
-            <div class="trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            </div>
+            <div class="trust-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
             <div>
               <h3>Cancel Anytime</h3>
               <p>Flexible operations designed to shift and scale alongside your business cycle.</p>
@@ -1313,7 +1153,7 @@
       </div>
     </section>
 
-    <!-- 12. FAQS SECTION -->
+    <!-- FAQS -->
     <section class="faqs section-padding" id="faqs">
       <div class="container">
         <div class="section-header">
@@ -1321,9 +1161,8 @@
           <h2>Questions? We've Got Answers</h2>
           <p>Common questions about our organic distribution network and content operations.</p>
         </div>
-        
         <div class="faqs-container" id="faqs-accordion">
-          <!-- Q1 -->
+          <!-- FAQ items (unchanged) -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">What makes Vyral Media different?</span>
@@ -1332,12 +1171,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                We are the only agency with a live theme pages network pointing attention directly to our clients. We route 100K+ daily organic views to your account. Nobody else can offer this direct, built-in distribution.
-              </div>
+              <div class="faq-answer">We are the only agency with a live theme pages network pointing attention directly to our clients. We route 100K+ daily organic views to your account. Nobody else can offer this direct, built-in distribution.</div>
             </div>
           </div>
-          <!-- Q2 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">What is a theme page network?</span>
@@ -1346,12 +1182,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                It is a network of faceless Instagram and TikTok accounts built around specific niches (business, luxury, lifestyle, fitness, finance, etc.). We run 10+ pages that pull massive daily views. Pro and Max clients receive dedicated pages built and curated for their exact target niche.
-              </div>
+              <div class="faq-answer">It is a network of faceless Instagram and TikTok accounts built around specific niches (business, luxury, lifestyle, fitness, finance, etc.). We run 10+ pages that pull massive daily views. Pro and Max clients receive dedicated pages built and curated for their exact target niche.</div>
             </div>
           </div>
-          <!-- Q3 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">How fast will I see results?</span>
@@ -1360,12 +1193,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                Month 1 is dedicated to building the foundation, scripting templates, and launching page nodes. In Month 2, real organic growth becomes visible. From Month 3 onwards, full network power compounds significantly, translating views into steady leads.
-              </div>
+              <div class="faq-answer">Month 1 is dedicated to building the foundation, scripting templates, and launching page nodes. In Month 2, real organic growth becomes visible. From Month 3 onwards, full network power compounds significantly, translating views into steady leads.</div>
             </div>
           </div>
-          <!-- Q4 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">Do I need to provide content?</span>
@@ -1374,12 +1204,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                It is completely optional. If you want to send your own clips/recordings, we will edit and structure them. If not, we handle everything end-to-end: scripting, custom graphics, sourcing premium visual assets, designing hooks, and scheduled posting.
-              </div>
+              <div class="faq-answer">It is completely optional. If you want to send your own clips/recordings, we will edit and structure them. If not, we handle everything end-to-end: scripting, custom graphics, sourcing premium visual assets, designing hooks, and scheduled posting.</div>
             </div>
           </div>
-          <!-- Q5 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">Is there a minimum contract?</span>
@@ -1388,12 +1215,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                No, all our plans are month-to-month. Cancel anytime, no questions asked. However, because organic results compound heavily over time, most of our clients stay with us for 3+ months naturally.
-              </div>
+              <div class="faq-answer">No, all our plans are month-to-month. Cancel anytime, no questions asked. However, because organic results compound heavily over time, most of our clients stay with us for 3+ months naturally.</div>
             </div>
           </div>
-          <!-- Q6 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">Do you work with Indian clients?</span>
@@ -1402,12 +1226,9 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                Yes! We work with both Indian and international brands, founders, and businesses. If you are based in India, contact us directly for customized INR currency pricing structures.
-              </div>
+              <div class="faq-answer">Yes! We work with both Indian and international brands, founders, and businesses. If you are based in India, contact us directly for customized INR currency pricing structures.</div>
             </div>
           </div>
-          <!-- Q7 -->
           <div class="faq-item">
             <button class="faq-trigger">
               <span class="faq-question">What do I need to get started?</span>
@@ -1416,13 +1237,10 @@
               </span>
             </button>
             <div class="faq-content">
-              <div class="faq-answer">
-                Just book a free 20-minute strategy call. We will discuss your brand and goals, compile a customized strategy proposal, sign a month-to-month agreement, and onboard you within 48 hours to start scripting.
-              </div>
+              <div class="faq-answer">Just book a free 20-minute strategy call. We will discuss your brand and goals, compile a customized strategy proposal, sign a month-to-month agreement, and onboard you within 48 hours to start scripting.</div>
             </div>
           </div>
         </div>
-        
         <div class="faqs-bottom-cta">
           <h3>Still Have Questions?</h3>
           <p>Book a free strategy call and we'll walk you through everything personally.</p>
@@ -1434,7 +1252,7 @@
       </div>
     </section>
 
-    <!-- 13. BLOG SECTION (NEW) -->
+    <!-- BLOG -->
     <section class="blog section-padding" id="blog">
       <div class="container">
         <div class="section-header">
@@ -1443,39 +1261,35 @@
           <p>Actionable strategies and tips to help you scale your brand organically.</p>
         </div>
         <div class="blog-grid">
-          <!-- Blog Post 1 -->
           <div class="blog-card glass-card">
             <span class="blog-date">June 15, 2026</span>
-            <h3><a href="#">How to Build a Theme Page Network for Your Brand</a></h3>
+            <h3><a href="blog.html">How to Build a Theme Page Network for Your Brand</a></h3>
             <p>Learn how leveraging multiple Instagram pages can amplify your reach and drive organic traffic to your main account.</p>
-            <a href="#" class="btn btn-secondary btn-small">Read More →</a>
+            <a href="blog.html" class="btn btn-secondary btn-small">Read More →</a>
           </div>
-          <!-- Blog Post 2 -->
           <div class="blog-card glass-card">
             <span class="blog-date">June 10, 2026</span>
-            <h3><a href="#">5 Content Hooks That Guarantee High Engagement</a></h3>
+            <h3><a href="blog.html">5 Content Hooks That Guarantee High Engagement</a></h3>
             <p>Discover the hook formulas that stop the scroll and keep your audience watching your reels till the end.</p>
-            <a href="#" class="btn btn-secondary btn-small">Read More →</a>
+            <a href="blog.html" class="btn btn-secondary btn-small">Read More →</a>
           </div>
-          <!-- Blog Post 3 -->
           <div class="blog-card glass-card">
             <span class="blog-date">June 5, 2026</span>
-            <h3><a href="#">Organic Growth vs. Paid Ads: Which Is Better for Long-Term Success?</a></h3>
+            <h3><a href="blog.html">Organic Growth vs. Paid Ads: Which Is Better for Long-Term Success?</a></h3>
             <p>We break down the pros and cons of both strategies and show you why a hybrid approach works best.</p>
-            <a href="#" class="btn btn-secondary btn-small">Read More →</a>
+            <a href="blog.html" class="btn btn-secondary btn-small">Read More →</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 14. FINAL CTA SECTION -->
+    <!-- FINAL CTA -->
     <section class="final-cta section-padding" id="contact">
       <div class="container">
         <div class="final-cta-content">
           <h2>Ready To Scale Your Brand?</h2>
           <div class="subtext">Join brands already growing with VyralMedia.</div>
           <div class="lead-text">Book your free call today &mdash; we'll tell you exactly what's holding your growth back and how to fix it.</div>
-          
           <div class="final-cta-buttons">
             <a href="apply.html" class="btn btn-primary" id="final-primary-cta">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
@@ -1487,27 +1301,15 @@
               View Pricing
             </a>
           </div>
-          
           <div class="final-cta-trust-row">
-            <div class="trust-item-inline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Free Strategy Call
-            </div>
-            <div class="trust-item-inline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              No Long-Term Contracts
-            </div>
-            <div class="trust-item-inline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Onboarded Within 48 Hours
-            </div>
+            <div class="trust-item-inline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Free Strategy Call</div>
+            <div class="trust-item-inline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>No Long-Term Contracts</div>
+            <div class="trust-item-inline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Onboarded Within 48 Hours</div>
           </div>
-          
           <div class="final-scarcity-box">
             <span class="dot"></span>
             We only take 5 new clients per month to maintain the highest level of quality and support.
           </div>
-          
           <div class="final-closing-statement">
             The brands that grow the fastest aren't always the biggest.
             <span class="highlight-green">They're the ones that stay visible.</span>
@@ -1518,135 +1320,50 @@
 
   </main>
 
-  <!-- 15. FOOTER STRUCTURE -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Logo Column -->
         <div class="footer-logo-block">
-          <a href="#home" class="logo">
-            <img src="logo.png" alt="Vyral Media Logo" loading="lazy">
-          </a>
+          <a href="#home" class="logo"><img src="logo.png" alt="Vyral Media Logo" loading="lazy"></a>
           <div class="tagline">CONTENT. DISTRIBUTION. GROWTH.</div>
           <p class="desc">Helping businesses, founders and creators scale their online presence through content, distribution systems and strategic growth.</p>
           <div class="footer-social-links">
-            <a href="https://instagram.com/vyralmedia.io" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            </a>
-            <a href="https://wa.me/919897303727" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" style="width: 18px; height: 18px;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-            </a>
+            <a href="https://instagram.com/vyralmedia.io" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a href="https://wa.me/919897303727" target="_blank" rel="noopener" class="social-btn" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" style="width: 18px; height: 18px;"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></a>
           </div>
         </div>
-        
-        <!-- Navigation Link Column -->
         <div>
           <div class="footer-col-title">Navigation</div>
           <ul class="footer-menu">
-            <li>
-              <a href="#home" class="footer-link">
-                Home
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#services" class="footer-link">
-                Services
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#network" class="footer-link">
-                Network
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#pricing" class="footer-link">
-                Pricing
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#faqs" class="footer-link">
-                FAQs
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#blog" class="footer-link">
-                Blog
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="footer-link">
-                Contact
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
+            <li><a href="#home" class="footer-link">Home <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="#services" class="footer-link">Services <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="#network" class="footer-link">Network <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="#pricing" class="footer-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="#faqs" class="footer-link">FAQs <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="blog.html" class="footer-link">Blog <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="#contact" class="footer-link">Contact <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
           </ul>
         </div>
-        
-        <!-- Get In Touch Column -->
         <div>
           <div class="footer-col-title">Get In Touch</div>
           <ul class="footer-info-list">
-            <li>
-              <a href="mailto:VyralMedia.io@gmail.com" class="footer-info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                VyralMedia.io@gmail.com
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/vyralmedia.io" target="_blank" rel="noopener" class="footer-info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                @vyralmedia.io
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/919897303727" target="_blank" rel="noopener" class="footer-info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-                WhatsApp Contact
-              </a>
-            </li>
-            <li>
-              <a href="https://vyralmedia.in" class="footer-info-item">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                vyralmedia.in
-              </a>
-            </li>
+            <li><a href="mailto:VyralMedia.io@gmail.com" class="footer-info-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>VyralMedia.io@gmail.com</a></li>
+            <li><a href="https://instagram.com/vyralmedia.io" target="_blank" rel="noopener" class="footer-info-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>@vyralmedia.io</a></li>
+            <li><a href="https://wa.me/919897303727" target="_blank" rel="noopener" class="footer-info-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>WhatsApp Contact</a></li>
+            <li><a href="https://vyralmedia.in" class="footer-info-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>vyralmedia.in</a></li>
           </ul>
         </div>
-        
-        <!-- Legal Link Column -->
         <div>
           <div class="footer-col-title">Legal</div>
           <ul class="footer-menu">
-            <li>
-              <a href="privacy-policy.html" class="footer-link">
-                Privacy Policy
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="terms-and-conditions.html" class="footer-link">
-                Terms &amp; Conditions
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
-            <li>
-              <a href="refund-policy.html" class="footer-link">
-                Refund Policy
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-              </a>
-            </li>
+            <li><a href="privacy-policy.html" class="footer-link">Privacy Policy <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="terms-and-conditions.html" class="footer-link">Terms &amp; Conditions <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
+            <li><a href="refund-policy.html" class="footer-link">Refund Policy <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg></a></li>
           </ul>
         </div>
       </div>
-      
       <hr class="footer-divider">
-      
       <div class="footer-bottom-strip">
         <div class="footer-bottom-left">
           <span>&copy; 2026 VyralMedia. All rights reserved.</span>
@@ -1661,7 +1378,6 @@
     </div>
   </footer>
 
-  <!-- JavaScript Behavior Code -->
   <script src="script.js"></script>
 </body>
 </html>

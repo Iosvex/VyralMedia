@@ -68,7 +68,7 @@ body {
   background: var(--accent);
 }
 
-/* --- TYPOGRAPHY --- */
+/* --- TYPOGRAPHY (INCREASED HEADINGS) --- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
   font-weight: 700;
@@ -77,12 +77,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-size: clamp(3rem, 6.5vw, 4.8rem); /* increased */
   font-weight: 900;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 5vw, 3.5rem); /* increased */
   font-weight: 800;
   text-align: center;
   margin-bottom: 1rem;
@@ -98,7 +98,7 @@ p {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 30%, #a3a3a3 100%);
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -466,21 +466,21 @@ p {
   .hero .trust-badge {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem; /* fix #2: move down */
+    margin-top: 1rem;
   }
 }
 
 .hero-content h1 {
   line-height: 1.15;
   margin-bottom: 1.5rem;
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.4rem, 5.5vw, 4.2rem); /* increased */
   text-align: left;
 }
 
 @media (max-width: 991px) {
   .hero-content h1 {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -544,10 +544,10 @@ p {
 .dashboard-mockup {
   position: relative;
   border-radius: 20px;
-  background: #0d0d0d;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   padding: 1.5rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   overflow: hidden;
 }
 
@@ -606,9 +606,9 @@ p {
 
 .db-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Always 2 columns */
   gap: 1rem;
-  margin-bottom: 0; /* removed chart */
+  margin-bottom: 0;
 }
 
 .db-card {
@@ -647,8 +647,6 @@ p {
   align-items: center;
   gap: 0.25rem;
 }
-
-/* Removed db-chart-container */
 
 /* --- SOCIAL PROOF & STATS --- */
 .social-proof {
@@ -703,7 +701,7 @@ p {
 }
 
 .stat-number {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.8rem, 4.5vw, 3.8rem);
   font-weight: 800;
   color: var(--text-primary);
   font-family: var(--font-headings);
@@ -1540,7 +1538,7 @@ p {
     text-align: center;
     gap: 1.5rem;
     padding: 2rem;
-    margin-top: 3rem; /* extra spacing fix #10 */
+    margin: 3rem auto 3rem !important;
   }
 }
 
@@ -1770,7 +1768,7 @@ p {
 }
 
 .final-cta-content h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.2rem); /* increased */
   font-weight: 900;
   margin-bottom: 1rem;
 }
@@ -2091,13 +2089,13 @@ p {
     padding: 0 1.25rem !important;
   }
 
-  /* --- Typography --- */
+  /* --- Typography (increased) --- */
   h1 {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
     line-height: 1.15 !important;
   }
   h2 {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
     margin-bottom: 0.75rem !important;
   }
   p {
@@ -2121,7 +2119,7 @@ p {
   }
   .hero-content h1 {
     margin-bottom: 0.75rem !important;
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
   .hero-content p {
     font-size: 1rem !important;
@@ -2146,7 +2144,7 @@ p {
     font-size: 0.8rem !important;
   }
 
-  /* --- Dashboard --- */
+  /* --- Dashboard: Force 2 columns always --- */
   .dashboard-mockup {
     padding: 1rem !important;
     border-radius: 12px !important;
@@ -2156,7 +2154,7 @@ p {
     gap: 0.5rem !important;
   }
   .db-grid {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr !important; /* Always 2 columns */
     gap: 0.75rem !important;
   }
   .db-card {
@@ -2176,7 +2174,7 @@ p {
     border-left-width: 3px !important;
   }
   .stat-number {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
   }
   .stat-label {
     font-size: 0.85rem !important;
@@ -2442,7 +2440,7 @@ p {
 
   /* --- Final CTA --- */
   .final-cta-content h2 {
-    font-size: 2rem !important;
+    font-size: 2.2rem !important;
   }
   .final-cta-content .subtext {
     font-size: 1.1rem !important;
@@ -2528,10 +2526,10 @@ p {
     padding: 0 1rem !important;
   }
   h1 {
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
   }
   h2 {
-    font-size: 1.5rem !important;
+    font-size: 1.7rem !important;
   }
   .glass-card {
     padding: 1.25rem !important;
@@ -2545,7 +2543,7 @@ p {
     padding-top: 7.5rem !important;
   }
   .db-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr !important; /* still 2 columns */
   }
   .stats-grid {
     grid-template-columns: 1fr !important;

@@ -566,14 +566,7 @@ p {
   gap: 0.6rem 1rem;
   width: 100%;
   margin-top: 1rem;
-}
-
-.hero-feature-item {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.4;
+  margin-bottom: 2.5rem; /* FIX 1 – gap between features and dashboard */
 }
 
 @media (max-width: 768px) {
@@ -585,7 +578,6 @@ p {
 @media (max-width: 480px) {
   .hero-features {
     gap: 0.3rem 0.6rem;
-    justify-items: center;
   }
 }
 
@@ -594,7 +586,7 @@ p {
   font-size: 0.95rem;
   font-weight: 500;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 @media (max-width: 480px) {
@@ -763,13 +755,13 @@ p {
 
 .stat-card {
   text-align: left;
-  border-left: 2px solid rgba(255, 255, 255, 0.05);
+  border-left: 2px solid var(--accent); /* FIX 2 – always green */
   padding: 1rem 0 1rem 1.5rem;
   transition: var(--transition-smooth);
+  box-shadow: -3px 0 12px rgba(130, 238, 45, 0.15);
 }
 
 .stat-card:hover {
-  border-left-color: var(--accent);
   padding-left: 2rem;
 }
 
@@ -2236,16 +2228,12 @@ p {
     max-width: 100% !important;
     justify-content: center !important;
   }
-  /* Center features on mobile */
   .hero-features {
-    grid-template-columns: 1fr 1fr !important;
     gap: 0.5rem 1rem !important;
     justify-items: center !important;
   }
   .hero-feature-item {
     font-size: 0.85rem !important;
-    white-space: normal !important;
-    word-break: break-word !important;
   }
 
   /* --- Dashboard: clean up on mobile --- */
@@ -2268,7 +2256,7 @@ p {
     font-size: 1.2rem !important;
   }
   .db-card-change {
-    display: none !important; /* hides % and Target Active */
+    display: none !important;
   }
 
   /* --- Social Proof Stats --- */
@@ -2651,9 +2639,6 @@ p {
   }
   .hero-headline {
     font-size: clamp(2.2rem, 8.5vw, 3rem) !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-    width: 100% !important;
   }
   .db-grid {
     grid-template-columns: 1fr 1fr !important;

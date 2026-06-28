@@ -561,11 +561,11 @@ p {
 }
 
 .hero-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.8rem 1rem;
-  justify-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   width: 100%;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -582,20 +582,11 @@ p {
 }
 
 .hero-feature-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  white-space: normal;
-  word-break: break-word;
-}
-.hero-feature-item .bullet {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 1rem;
-  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.6;
 }
 
 @media (max-width: 480px) {
